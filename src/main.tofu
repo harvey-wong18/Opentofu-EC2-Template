@@ -50,7 +50,7 @@ resource "aws_key_pair" "instance_pub_key" {
 resource "aws_instance" "ec2_Ubuntu" {
     ami           = data.aws_ami.ubuntu.id
     instance_type = var.instance_type
-    availability_zone = var.availability_zone
+    #availability_zone = var.availability_zone
     # "c5.4xlarge""g6.2xlarge"
     # "g6.8xlarge"
 
