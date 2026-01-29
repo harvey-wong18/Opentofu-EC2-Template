@@ -82,14 +82,17 @@ mkdir $USER_HOME/isaac-sim
 wget -O $USER_HOME/Downloads/isaac-sim.zip https://download.isaacsim.omniverse.nvidia.com/isaac-sim-standalone-5.1.0-linux-x86_64.zip
 unzip $USER_HOME/Downloads/isaac-sim.zip -d $USER_HOME/isaac-sim/
 
+echo "step5" > $USER_HOME/setup/step5.txt
 
-su ubuntu
 mkdir -p $USER_HOME/miniconda3
 sudo wget -O $USER_HOME/miniconda3/miniconda.sh https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh 
 sudo bash $USER_HOME/miniconda3/miniconda.sh -b -u -p $USER_HOME/miniconda3
 sudo rm -f $USER_HOME/miniconda3/miniconda.sh
 
+echo "export PATH=$PATH:~/miniconda3/bin" >> $USER_HOME/.bashrc
 source $USER_HOME/miniconda3/bin/activate
 conda init --all
+
+echo "step6" > $USER_HOME/setup/step6.txt
 
 reboot
