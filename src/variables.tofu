@@ -1,12 +1,12 @@
 variable "region" {
     type = string
-    default = "eu-central-1"
+    default = "eu-north-1"
     description = "aws region to deploy resources to"
 }
 
 variable "availability_zone" {
     type = string
-    default = "eu-central-1a"
+    default = "eu-north-1a"
     description = "aws region to deploy resources to"
 }
 
