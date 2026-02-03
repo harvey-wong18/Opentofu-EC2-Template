@@ -43,8 +43,8 @@ data "aws_ami" "ubuntu" {
 
 
 resource "aws_key_pair" "instance_pub_key" {
-    key_name   = "ec2_key"
-    public_key = file("~/.ssh/ec2pub.pub")
+    key_name   = var.keyName
+    public_key = file(var.pubKeyName)
 }
 
 resource "aws_instance" "ec2_Ubuntu" {

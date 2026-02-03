@@ -93,6 +93,9 @@ echo "export PATH=$PATH:~/miniconda3/bin" >> $USER_HOME/.bashrc
 source $USER_HOME/miniconda3/bin/activate
 conda init --all
 
+chmod -R 700 $USER_HOME/Downloads
+setxkbmap -layout gb
+
 echo "step6" > $USER_HOME/setup/step6.txt
 
 reboot
